@@ -11,8 +11,8 @@ const Sale = () => {
         <div className="absolute flex items-center justify-between w-[80%] sm:w-[75%] md:w-1/2 h-[50px] -translate-x-1/2 left-1/2 -top-[25px]">
           <div className="absolute h-[105%] full w-[75%] sm:w-[83%] md:w-[83%] lg:w-[88%] -top-4 left-1/2  -translate-x-1/2 gradient-sec cp-both z-20 flex justify-center items-center ">
             <div className="flex items-center justify-center gap-2 cp-child gradient-main cp-both">
-              <h2 className="text-2xl text-white f">Sale !</h2>{" "}
-              <span className="text-green-400 ">20% OFF</span>"
+              <h2 className="text-2xl text-white f">Sale !</h2>
+              <span className="text-green-400 ">20% OFF</span>
             </div>
           </div>
           <div className="w-[75px] h-[50px] gradient-sec cp-l overflow-hidden flex justify-center items-center">
