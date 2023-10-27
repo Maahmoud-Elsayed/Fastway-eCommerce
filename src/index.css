@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-fixed {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full;
+  }
+  .btn {
+    @apply text-white bg-secondary  hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-yellow-700 rounded-full;
+  }
+  .btn-sec {
+    @apply rounded-full text-white active:bg-blue-400 bg-primary outline-none hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-primary;
+  }
+  .active-btn {
+    @apply duration-150 active:bg-primary active:text-white active:ring-blue-600 active:ring-2 active:ring-offset-2;
+  }
+  .input {
+    @apply border-gray-300  outline-none rounded-full  w-full border focus:border-primary text-gray-500 bg-transparent shadow-sm;
+  }
+
+  .cp-r {
+    clip-path: polygon(0 0, 100% 0, 80% 50%, 100% 100%, 0 100%, 0 50%);
+  }
+
+  .cp-l {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 20% 50%);
+  }
+
+  .cp-both {
+    clip-path: polygon(3% 0%, 97% 0%, 100% 100%, 0% 100%);
+  }
+  .cp-child {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+  }
+
+  .sale-p1 {
+    width: calc(100% - 40px);
+    height: calc(100% - 50px);
+  }
+  .sale-p2 {
+    width: calc(100% - 25px);
+    height: calc(100% - 25px);
+  }
+
+  .gradient-main {
+    background: linear-gradient(180deg, #8648f2, #21008a);
+  }
+  .gradient-sec {
+    background: linear-gradient(180deg, #ffb939, #fc6a00);
+  }
+  .gradient-third {
+    background: linear-gradient(0deg, #ffb939, #fc6a00);
+  }
+
+  .afterBtn[data-text]::after {
+    content: attr(data-text);
+    background-color: black;
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 5;
+    font-size: 12px;
+    border-radius: 6px;
+    width: fit-content;
+    padding: 10px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
+    cursor: text;
+  }
+
+  .afterBtn[data-text]:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+
+  .baloo {
+    text-shadow: 0 3px 0 rgba(186, 159, 25, 0.723);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+::-webkit-scrollbar {
+  @apply rounded-full w-1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded-full;
+}
+
+.card__top,
+.card__bottom,
+.card__back::before,
+.card__back::after {
+  background: linear-gradient(180deg, #8648f2, #21008a) !important;
+}
+
+.size-medium .flip-countdown-piece {
+  margin: 0 1em !important;
+}
+
+.size-medium .flip-countdown-piece .flip-countdown-title {
+  font-size: 14px !important;
+  color: #4b5563 !important;
+}
+
+.size-medium
+  .flip-countdown-piece
+  .flip-countdown-card
+  .flip-countdown-card-sec {
+  margin: 5px 0.025em !important;
+  font-size: 65px !important;
+}
+
+@media screen and (max-width: 769px) {
+  .size-medium .flip-countdown-piece {
+    margin: 0.2em !important;
+  }
+
+  .size-medium .flip-countdown-piece .flip-countdown-title {
+    font-size: 8px !important;
+    color: #4b5563 !important;
+  }
+
+  .size-medium
+    .flip-countdown-piece
+    .flip-countdown-card
+    .flip-countdown-card-sec {
+    margin: 0 0.023em !important;
+    font-size: 28px !important;
+  }
+}
